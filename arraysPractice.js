@@ -206,8 +206,16 @@ console.log(addItem(myGroceryList, "Eggs"));
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
+var maker;
+maker = function() {
+    var arr = [];
+    for(var i = 1; i < 216; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
 
-
+console.log(maker());
 
 //Next Problem
 
@@ -217,8 +225,20 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
   //Code Here
+var addTen;
+addTen = function(nums) {
+    var newArr = [];
+    for(i in nums) {
+        //parseInt(nums[i], 10);
+        newArr.push(parseInt(nums[i], 10))
+    }
+    for(i in newArr) {
+        newArr[i] += 10;
+    }
+    return newArr;
+};
 
-
+console.log(addTen(numbers));
 
 //Next Problem
 
@@ -238,7 +258,16 @@ for(var i = 0; i < num2; i++){
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
   //Code Here
+var longer;
+longer = function(uno, dos) {
+    if(uno.length > dos.length) {
+        return uno;
+    } else {
+        return dos;
+    }
+}
 
+console.log(longer(arr1, arr2));
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
@@ -246,9 +275,13 @@ for(var i = 0; i < num2; i++){
 */
 
   //Code Here
+var both;
+both = function(arrOne, arrTwo) {
+    return arrOne.concat(arrTwo);
+}
   
-  
-  
+console.log(both(arr1, arr2));
+
 
 //NEXT PROBLEM
 
