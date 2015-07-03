@@ -320,13 +320,24 @@ sure that it's equal to 4. */
 
   //Code Here
 
+devMountainEmployees.push(tyler, cahlan, ryan, colt);
+console.log(devMountainEmployees.length);
+
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absense to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
   //Code Here
+var rmv;
+rmv = function(arr) {
+    for (i in arr) {
+        if (arr[i].name === 'Cahlan') {
+            arr.splice(i, 1);
+        }
+    }
+    return arr;
+}
 
-
-
+console.log(rmv(devMountainEmployees));
 
 //NEXT PROBLEM
 
